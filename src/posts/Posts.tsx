@@ -17,7 +17,7 @@ const PostList = ({ posts }: { posts: Post[] }) => {
         <List.Item>
           <List.Item.Meta
             title={
-              <a href={`/posts/${p.id}`}>
+              <a href={`posts/${p.id}`}>
                 <Space direction='vertical' size={2}>
                   {p.title}
                   <Typography.Text italic>User: {p.userId}</Typography.Text>
