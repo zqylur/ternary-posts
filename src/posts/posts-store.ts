@@ -98,15 +98,7 @@ export { PostsProvider };
 export const useAllPosts = () => {
   const { posts, loading, error } = usePostsStore();
 
-  const postsByUser = useMemo(() => {
-    const counts = new Map<number, number>();
-    posts.forEach((post) => {
-      counts.set(post.userId, (counts.get(post.userId) || 0) + 1);
-    });
-    return counts;
-  }, [posts]);
-
-  return { posts, postsByUser, loading, error };
+  return { posts, loading, error };
 };
 
 export const useUsers = () => {
